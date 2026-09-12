@@ -1,0 +1,8 @@
+import random
+def generate_username(full_name):
+    name_parts = full_name.split()
+    if len(name_parts) > 2:
+        return "please enter a full name (first and last)."
+    first_name = name_parts[0].lower()
+    last_name = name_parts[-1].lower()
+    
