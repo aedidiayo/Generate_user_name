@@ -5,4 +5,19 @@ def generate_username(full_name):
         return "please enter a full name (first and last)."
     first_name = name_parts[0].lower()
     last_name = name_parts[-1].lower()
+
+
+#BASIC COMBINATION 
+    username1 = first_name + last_name
+    username2 = first_name[:3] + last_name[-3:]
+    username3 = last_name[:3] + first_name[-2:]
+    username4 = last_name[:2] + first_name[-3:]
+
+    #ADD RANDOM NUMBERS
+    rand_num = random.randint(10,99)
+    username5 = first_name + str(rand_num)
+    username6 = last_name + str(rand_num)
+
+    
+]
     
