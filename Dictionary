@@ -1,0 +1,11 @@
+def cups_to_grams(cups,ingredient):
+    conversion_rates={"flour": 120, #1cup = 120g of Flour
+                      "sugar": 200, 
+                      "butter": 300,
+                      "pepper": 400}
+
+    if ingredient in conversion_rates:
+        grams = cups*conversion_rates[ingredient]
+        return grams
+    else:
+        return "Conversion rate for this ingredients is not available." 
