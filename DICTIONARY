@@ -1,0 +1,46 @@
+def cups_to_grams(cups,ingredient):
+    conversion_rates={"flour": 120, #1cup = 120g of Flour
+                      "sugar": 200, 
+                      "butter": 300,
+                      "pepper": 400}
+
+    if ingredient in conversion_rates:
+        grams = cups*conversion_rates[ingredient]
+        return grams
+    else:
+        return "Conversion rate for this ingredients is not available."
+    
+def tablespoons_to_teaspoons(tablespoons):
+    return tablespoons*3
+
+def grams_to_cups(grams,ingrdients):
+    conversion_rates = {
+        "flour":120,
+        "sugar":200,
+        "butter":227}
+    if ingrdients in conversion_rates:
+        cups= grams/conversion_rates[ingrdients]
+        return cups
+    else:
+        return "Conversion rate for this ingredients is not available."
+
+#Main program
+def recipe_converter():
+    while True:
+        print("\nRecipe Converter")
+        print("1.Convert cups to grams")
+        print("2.Convert tablespoons to teaspoons")
+        print("3.Covert grams to cups")
+        print("4.exit")
+
+        choice=input("Choose an option 1-4):")
+        if choice == "1":
+            cups= float(input("enter the number of cups:"))
+            ingredient=input("enter the ingrdients(flour, sugar,butter):") ").strip().lower()"
+            result=cups_to_grams(cups, ingredient)
+            print(f"result: {result} grams")  
+        elif choice == "2":
+            tablespoons=float(input("enter the number of talespoons:"))
+            result=tablespoons_to_teaspoons(tablespoons)
+            print(f"result: {result} teaspoons f"(result))
+
