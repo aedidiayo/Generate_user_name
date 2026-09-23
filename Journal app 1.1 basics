@@ -1,0 +1,51 @@
+#OPEN A FILE IN WRITE MODE
+file = open("example.txt" ,"w")
+
+#WRITE to the file
+file.write("thank you, hi, how are you doing")
+file.write("\n this is a sample file")
+file.close()
+
+file = open("example.txt" , "r")
+# to read entire content
+content = file.read()
+print ("file content\n" + content)
+file.close()
+
+print("_"*40)
+#reading line by line
+file = open("example.txt", "r")
+print(file.readline()) # it will read only first line
+file.close()
+print("_"*40)
+
+#appending to a file
+file = open("example.txt", "a")
+file.write("\nthis line was appended")
+file.close()
+
+#read entire line with the newly added line
+file = open("example.txt" , "r")
+print(file.read())
+file.close()
+print("_"*40)
+
+#method 2
+#"wrting the file using with keyboard"""
+"""the with statement ensures that file 
+are properly closed even if an error occurs 
+also, we need not to close the file
+"""
+
+with open("data.txt", "w") as file:
+    file.write("line1\n")
+
+#appending into the file
+with open("data.txt", "a") as file:
+    file.write("line2\n")
+
+#reading the file with the statement
+with open("data.txt", "r") as file:
+    print(file.read())
+
+
